@@ -8,25 +8,25 @@ public class TesaConta {
 		
 		
 		Conta contaCorrente = new Conta();
-		contaCorrente.titular = "Carlos";
-		contaCorrente.numeroDaConta = 123;
-		contaCorrente.agencia = "45678-9";
-		contaCorrente.saldo = 50.00;
-		contaCorrente.dataDeAbertura = "04/06/2015";
+		contaCorrente.setTitular("Carlos");
+		contaCorrente.setNumeroDaConta(123);
+		contaCorrente.setAgencia("45678-9");
+		contaCorrente.setSaldo(50.00);
+		contaCorrente.setDataDeAbertura("04/06/2015");
 		
 		//metodos sacar, depositar e calcular rendimentos
-		System.out.println("Saldo inicial " + contaCorrente.saldo);
+		System.out.println("Saldo inicial " + contaCorrente.getSaldo());
 		
 		contaCorrente.saca(10);
-		System.out.println("Saldo após o saque " + contaCorrente.saldo);
+		System.out.println("Saldo após o saque " + contaCorrente.getSaldo());
 		
 		contaCorrente.deposita(200);
-		System.out.println("Saldo após o deposito " + contaCorrente.saldo);
+		System.out.println("Saldo após o deposito " + contaCorrente.getSaldo());
 		
 		System.out.println("Saldo com rendimentos " + contaCorrente.calcuaRendimento());
 		
-		System.out.println("Saldo Atual = " + contaCorrente.saldo + "\nData de Abertura = " + 
-		contaCorrente.dataDeAbertura + ". ");
+		System.out.println("Saldo Atual = " + contaCorrente.getSaldo() + "\nData de Abertura = " + 
+		contaCorrente.getDataDeAbertura() + ". ");
 		
 		System.out.println("=============================================================");
 		
